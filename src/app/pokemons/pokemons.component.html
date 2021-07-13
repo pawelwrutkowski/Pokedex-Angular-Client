@@ -1,0 +1,31 @@
+<h2>Lista</h2>
+<table>
+  <thead>
+  <tr>
+    <td>Name</td>
+    <td>Number</td>
+    <td>HP</td>
+    <td>Attack</td>
+    <td>Defense</td>
+    <td>Special Attack</td>
+    <td>Special Defense</td>
+    <td>Speed</td>
+    <td>Primary Type</td>
+    <td>Secondary Type</td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let pokemon of pokemons">
+    <td>{{pokemon.name}}</td>
+    <td>{{pokemon.number}}</td>
+    <td>{{pokemon.hp}}</td>
+    <td>{{pokemon.attack}}</td>
+    <td>{{pokemon.defense}}</td>
+    <td>{{pokemon.specialAttack}}</td>
+    <td>{{pokemon.specialDefense}}</td>
+    <td>{{pokemon.speed}}</td>
+    <td>{{pokemon.primaryType}}</td>
+    <td>{{pokemon.secondaryType}}</td>
+  </tr>
+  </tbody>
+</table>

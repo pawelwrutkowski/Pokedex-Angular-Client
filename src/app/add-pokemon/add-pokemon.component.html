@@ -1,0 +1,91 @@
+<h2>Lista</h2>
+<table>
+  <thead>
+  <tr>
+    <td>Name</td>
+    <td>Number</td>
+    <td>Health Points</td>
+    <td>Attack</td>
+    <td>Defense</td>
+    <td>Special Attack</td>
+    <td>Special Defense</td>
+    <td>Speed</td>
+    <td>Primary Type</td>
+    <td>Secondary Type</td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let pokemon of pokemons">
+    <td>{{pokemon.name}}</td>
+    <td>{{pokemon.number}}</td>
+    <td>{{pokemon.hp}}</td>
+    <td>{{pokemon.attack}}</td>
+    <td>{{pokemon.defense}}</td>
+    <td>{{pokemon.specialAttack}}</td>
+    <td>{{pokemon.specialDefense}}</td>
+    <td>{{pokemon.speed}}</td>
+    <td>{{pokemon.primaryType}}</td>
+    <td>{{pokemon.secondaryType}}</td>
+  </tr>
+  </tbody>
+</table>
+
+<h2>Dodaj pokemona</h2>
+<form (ngSubmit)="createPokemon();">
+  <div>
+    <label>
+     Name: <input type="text" name="name" [(ngModel)]="newPokemon.name">
+    </label>
+  </div>
+  <div>
+    <label>
+      Pokedex number: <input type="text" name="number" [(ngModel)]="newPokemon.number">
+    </label>
+  </div>
+  <div>
+    <label>
+      HP: <input type="text" name="hp" [(ngModel)]="newPokemon.hp">
+    </label>
+  </div>
+  <div>
+    <label>
+      Attack: <input type="text" name="attack" [(ngModel)]="newPokemon.attack">
+    </label>
+  </div>
+  <div>
+    <label>
+      Defense: <input type="text" name="defense" [(ngModel)]="newPokemon.defense">
+    </label>
+  </div>
+  <div>
+    <label>
+      Special Attack: <input type="text" name="specialAttack" [(ngModel)]="newPokemon.specialAttack">
+    </label>
+  </div>
+  <div>
+    <label>
+      Special Defense: <input type="text" name="specialDefense" [(ngModel)]="newPokemon.specialDefense">
+    </label>
+  </div>
+  <div>
+    <label>
+      Speed: <input type="text" name="speed" [(ngModel)]="newPokemon.speed">
+    </label>
+  </div>
+  <div>
+    <label>
+      PrimaryType: <input type="text" name="primaryType" [(ngModel)]="newPokemon.primaryType">
+    </label>
+  </div>
+  <div>
+    <label>
+      Secondary Type: <input type="text" name="secondaryType" [(ngModel)]="newPokemon.secondaryType">
+    </label>
+  </div>
+  <div>
+    <label>
+      Description: <input type="text" name="description" [(ngModel)]="newPokemon.description">
+    </label>
+  </div>
+  <input type="submit">
+</form>
