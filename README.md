@@ -4,11 +4,11 @@
 * [Technologies](#technologies)
 * [Features](#features)
 * [Setup](#setup)
-* [Project status](#project status)
+* [Project status](#project-status)
 * [Acknowledgements](#acknowledgements)
 * [Contact](*contact)
 ## General Info
-- It's one half of the project: Client Server for accessing Spring REST API Pokedex.
+- It's second half of the project: Angular Client for accessing Spring REST API Pokedex.
 - The reason for creating this program was to practice codewriting and technologies learned on the course (i.a. Angular), and making two services (Spring and Angular) cooperate.
 ## Technologies
 Project is created with:
