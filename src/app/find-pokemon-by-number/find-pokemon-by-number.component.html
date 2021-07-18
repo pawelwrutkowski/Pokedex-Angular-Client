@@ -1,6 +1,16 @@
-<h2>Pokemon details</h2>
+<h3>Znajdź pokemona po numerze</h3>
+<form (ngSubmit)="updateFindQuery()">
+  <div>
+    <label>
+      Name: <input type="number" name="number" [(ngModel)]="pokemonNumber">
+    </label>
+  </div>
+  <input type="submit">
+</form>
+
+<h3>Pokemon details</h3>
 <h5>Details of Pokemon with Pokedex National number: {{foundPokemon.number}}</h5>
-<h5>Name: {{foundPokemon.name}}</h4>
+<h5>Name: {{foundPokemon.name}}</h5>
 <h6>HP: {{foundPokemon.hp}}</h6>
 <h6>Attack: {{foundPokemon.attack}}</h6>
 <h6>Defense: {{foundPokemon.defense}}</h6>

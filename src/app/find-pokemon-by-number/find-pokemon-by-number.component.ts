@@ -9,6 +9,7 @@ import {ActivatedRoute} from "@angular/router";
   styleUrls: ['./find-pokemon-by-number.component.scss']
 })
 export class FindPokemonByNumberComponent implements OnInit {
+  pokemonNumber: number = 0;
   foundPokemon: Pokemon = {
     number: 0,
     name: '',
@@ -28,6 +29,10 @@ export class FindPokemonByNumberComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  this.findByNumber()
+  }
+
+  findByNumber() {
     const pokemonNumber = this.activatedRoute
       .snapshot
       .params
@@ -39,4 +44,8 @@ export class FindPokemonByNumberComponent implements OnInit {
       .subscribe(entry => this.foundPokemon = entry);
   }
 
+  updateFindQuery() {
+    this.httpClient.get<Pokemon>('http://localhost:8080/pokemon/number/' + this.pokemonNumber)
+      .subscribe(entry => this.foundPokemon = entry);
+  }
 }

@@ -1,0 +1,19 @@
+<h3>Znajdź pokemona po numerze</h3>
+<form (ngSubmit)="findByNumber()">
+  <div>
+    <label>
+      Name: <input type="number" name="number" [(ngModel)]="byNumber">
+    </label>
+  </div>
+  <input type="submit">
+</form>
+
+<h3>Znajdź pokemona po nazwie</h3>
+<form (ngSubmit)="findByName()">
+  <div>
+    <label>
+      Name: <input type="text" name="name" [(ngModel)]="byName">
+    </label>
+  </div>
+  <input type="submit">
+</form>

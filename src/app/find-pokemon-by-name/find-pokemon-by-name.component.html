@@ -1,1 +1,22 @@
-<p>find-pokemon-by-name works!</p>
+<h3>Znajdź pokemona po nazwie</h3>
+<form (ngSubmit)="updateFindQuery()">
+  <div>
+    <label>
+      Number: <input type="text" name="name" [(ngModel)]="pokemonName">
+    </label>
+  </div>
+  <input type="submit">
+</form>
+
+<h3>Pokemon details</h3>
+<h5>Details of Pokemon named: {{foundPokemon.name}}</h5>
+<h5>Number: {{foundPokemon.number}}</h5>
+<h6>HP: {{foundPokemon.hp}}</h6>
+<h6>Attack: {{foundPokemon.attack}}</h6>
+<h6>Defense: {{foundPokemon.defense}}</h6>
+<h6>Special Attack: {{foundPokemon.specialAttack}}</h6>
+<h6>Special Defense: {{foundPokemon.specialDefense}}</h6>
+<h6>Speed: {{foundPokemon.speed}}</h6>
+<h6>Primary Type: {{foundPokemon.primaryType}}</h6>
+<h6>Secondary Type: {{foundPokemon.secondaryType}}</h6>
+<p>Description: {{foundPokemon.description}}</p>
